@@ -401,7 +401,7 @@ def create_jog(parent, overlay):
         "left",
         label=overlay["left"],
         frame=Rect(x=xc-110, y=60, w=60, h=40),
-        note=MidiNotes.E_7,
+        note=MidiNotes.D_7,
         type=ButtonType.MOMENTARY
     )
 
@@ -410,7 +410,7 @@ def create_jog(parent, overlay):
         "zoom",
         label1=overlay["zoom"],
         frame=Rect(x=xc-30, y=60, w=60, h=40),
-        note=MidiNotes.DSharp_7
+        note=MidiNotes.E_7
     )
 
     create_button(
@@ -418,7 +418,7 @@ def create_jog(parent, overlay):
         "right",
         label=overlay["right"],
         frame=Rect(x=xc+50, y=60, w=60, h=40),
-        note=MidiNotes.F_7,
+        note=MidiNotes.DSharp_7,
         type=ButtonType.MOMENTARY
     )
 
