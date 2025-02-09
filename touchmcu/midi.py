@@ -28,27 +28,8 @@ def midi_note_bang(note, send=True, receive=True):
             "min": 0,
             "max": 127
         })
-
-        pressed_off = MidiMessage()
-        pressed_off.receive = False
-        pressed_off.triggers["touch"] = Condition.ANY
-        pressed_off.type = MidiMessageType.NOTE_OFF
-        pressed_off.data1 = note
-        pressed_off.data2 = 0
-        pressed_off.values.append({
-            "type": MessageValues.Type.CONSTANT,
-            "key": ""
-        })
-        pressed_off.values.append({
-            "type": MessageValues.Type.CONSTANT,
-            "key": ""
-        })
-        pressed_off.values.append({
-            "type": MessageValues.Type.CONSTANT,
-            "key": "",
-        })
-
-        result += [pressed, pressed_off]
+        
+        result += [pressed]
 
     if receive:
         update = MidiMessage()
